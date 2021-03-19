@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    background-color: #A3DCEF;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 53px;
+}
+
+.count-down-wrapper {
+    z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.count-down-wrapper .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    text-align: center;
+    margin-top: -2em;
+
+}
+
+.count-down-wrapper .text .date {
+    font-size: 40px;
+    padding-top: 1em;
+}
+
+.count-down-wrapper #count-down {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.mars-ground {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("images/mars-ground.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+
+.mars-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+
+    z-index: -1;
+    background-image: url("images/mars-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 65%;
+}
+
+.head {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.astronaut {
+    display: none;
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 20%;
+}
+
+@media screen and (max-width: 350px) {
+
+    .count-down-wrapper .text {
+        font-size: 2em;
+        text-align: center;
+        margin-top: -2em;
+    }
+
+    .count-down-wrapper .text .date {
+        padding-top: .5em;
+        font-size: 30px;
+    }
+
+    .count-down-wrapper #count-down {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url("images/sky.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo {
+        display: block;
+        position: absolute;
+        width: auto;
+        left: 41px;
+        top: 43px;
+    }
+
+    .count-down-wrapper .text {
+        display: initial;
+        font-size: 5rem;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .count-down-wrapper .text .date {
+        padding-top: 0;
+        font-size: 4rem;
+    }
+
+    .count-down-wrapper #count-down {
+        font-size: 150px;
+    }
+
+    .astronaut {
+        display: block;
+    }
+
+    .head {
+        display: none;
+    }
+
+    .star {
+        position: absolute;
+        left: 3.96%;
+        right: 4.17%;
+        top: 7.23%;
+        bottom: 30.54%;
+        background-image: url("images/stars.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mars-background {
+        background-position-y: 65%;
+    }
+}
+
+/** 1200px > screen > 992px */
+
+@media screen and (min-width: 992px) {
+    .mars-background {
+        background-position-y: 70%;
+    }
+    .count-down-wrapper #count-down {
+        font-size: 250px;
+    }
+}
+
+/** > 1200px */
+@media screen and (min-width: 1200px) {
+    .mars-background {
+        background-size: contain;
+    }
+
+    .mars-ground {
+        background-size: contain;
+    }
+}
+
